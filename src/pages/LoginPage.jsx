@@ -50,7 +50,7 @@ const LoginPage = () => {
 
 
                     <FormLabel>Password</FormLabel>
-                    <Input onChange={handleChange} name='password' type='number' bg="white" placeholder='Enter your password' />
+                    <Input onChange={handleChange} name='password' type='text' bg="white" placeholder='Enter your password' />
 
 
 
