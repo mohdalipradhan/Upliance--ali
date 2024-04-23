@@ -111,7 +111,7 @@ const UserDataForm = () => {
   }, [unsavedChanges]);
 
   return (
-    <Flex  borderRadius="7px" width="100%"  justify="center" background="white" padding="17px">
+    <Flex  borderRadius="7px" width="600px"  justify="center" background="white" padding="17px">
       <form style={{ width: "100%" }} action="" onSubmit={handleOnSubmitForm}>
         <FormLabel>Name</FormLabel>
         <Input name='name' onChange={handleNameChange} placeholder='Enter your name' type='text' bg="white" />

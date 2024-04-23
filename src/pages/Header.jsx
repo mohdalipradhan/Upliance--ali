@@ -9,15 +9,14 @@ const Header = () => {
     const navigate = useNavigate();
     const { isLoggedIn, setIsLoggedIn } = useIsLoggedInStore();
     const userName = JSON.parse(localStorage.getItem("user"));
-    console.log("this is userName", userName);
+    console.log("this is userName", userName)
 
     function handleLogOut() {
         setIsLoggedIn(false);
         setOpeLogout(false);
         localStorage.removeItem("user");
     }
-    console.log("this is ", isLoggedIn);
-
+    console.log("this is ", isLoggedIn)
     return (
         <Flex color="gray.700" fontWeight={700} fontSize={20} width="100vw" backgroundColor="blue.200" padding={4} justify="center" >
             <Flex justify="space-around" width="80%">
@@ -25,6 +24,7 @@ const Header = () => {
                     <Text
                         className="logo"
                         cursor="pointer"
+
                         onClick={() => navigate('/homePage')}
                     >
                         Play Ground
@@ -32,34 +32,28 @@ const Header = () => {
                 </Box>
                 <Flex flex="1" justify="flex-end" >
                     <Box justifyContent="center"  pos="relative" >
-                        {isLoggedIn ? (
-                            userName ? (
-                                <Text
-                                    cursor="pointer"
-                                    onClick={()=>setOpeLogout(!opeLogout)}
-                                    marginRight="4"
-                                >
-                                    {userName.name}
-                                </Text>
-                            ) : null
-                        ) : (
-                            <Text
-                                cursor="pointer"
-                                onClick={() => navigate("/")}
-                            >
-                                Login Now
-                            </Text>
-                        )}
-                        {opeLogout && (
-                            <Flex zIndex={4} left={6} width="auto" cursor="pointer"  onClick={handleLogOut} padding={2} background="white" borderRadius="4px" border="1px solid gray" pos="absolute">
-                                <Text>Log Out</Text>
-                            </Flex>
-                        )}
+                        {isLoggedIn ? <Text
+                            cursor="pointer"
+                            onClick={()=>setOpeLogout(!opeLogout)}
+                            marginRight="4"
+                        >
+                            {userName?.name}
+                        </Text> : <Text
+                            cursor="pointer"
+                            onClick={() => navigate("/")}
+                        >Login Now</Text>}
+                        {opeLogout && <Flex zIndex={4} left={{base: "-12px", md: 6}} width="100px" cursor="pointer"  onClick={handleLogOut} padding={2} background="white" borderRadius="4px" border="1px solid gray" pos="absolute">
+                            <Text>Log Out</Text>
+                        </Flex>}
                     </Box>
+
+
                 </Flex>
+
             </Flex>
+
         </Flex>
-    );
+    )
 }
 
-export default Header;
+export default Header

@@ -12,15 +12,15 @@ const SignUpPage = () => {
     });
 
 
-    function handleNavigate(){
-        navigate("/homepage");
-        const user = {
-            "name": "Mohammad Ali",
-            "password": "123456",
-            "email": "mdsali914@gmail.com"
-        };
-        localStorage.setItem("user", JSON.stringify(user));
-    }
+    // function handleNavigate(){
+    //     navigate("/homepage");
+    //     const user = {
+    //         "name": "Mohammad Ali",
+    //         "password": "123456",
+    //         "email": "mdsali914@gmail.com"
+    //     };
+    //     localStorage.setItem("userFullName", user.name);
+    // }
     
     const [message, setMessage] = useState("")
     const navigate = useNavigate();

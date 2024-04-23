@@ -26,12 +26,12 @@ const Home = () => {
     <Flex width={{ base: "100%" }} overflow="hidden" justify="center">
       <PageContent>
         <>
-          {isLoggedIn ? <> <Flex justify={'space-between'} flexWrap="wrap" gap={10} >
-            <Flex width={{ base: "90vw", md: "auto" }}><Counter background={backgroundColor} selectedColor={selectedColor} setSelectedColor={setSelectedColor} count={count} setCount={setCount} /></Flex>
-            <Flex height={{ base: "400px", md: "340px" }}><RichTextEditor /></Flex>
+          {isLoggedIn ? <> <Flex justify={{md: 'space-between', base: 'center'}} flexWrap="wrap" gap={10} >
+            <Flex width={{ base: "90vw", md: "600px" }}><Counter background={backgroundColor} selectedColor={selectedColor} setSelectedColor={setSelectedColor} count={count} setCount={setCount} /></Flex>
+            <Flex width={{ base: "90vw", md: "600px" }} height={{ base: "400px", md: "340px" }}><RichTextEditor /></Flex>
 
-            <Flex mt={12} width={{ base: "100%", md: "650px" }}><UserDataForm /></Flex>
-            <Flex mt={12} width={{ base: "100%", md: "650px" }}><UserdataDisplay /></Flex>
+            <Flex  mt={12} width={{ base: "90vw", md: "600px" }}><UserDataForm /></Flex>
+            <Flex mt={12} width={{ base: "90vw", md: "600px" }}><UserdataDisplay /></Flex>
 
           </Flex>
 

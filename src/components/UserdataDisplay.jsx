@@ -114,24 +114,24 @@ const UserdataDisplay = () => {
   }, [unsavedChanges]);
 
   return (
-    <Flex borderRadius="7px" width="100%"  justify="center" background="white" padding="17px">
+    <Flex borderRadius="7px" width="600px"  justify="center" background="white" padding="17px">
       <form style={{ width: "100%" }} action="" onSubmit={handleOnSubmitForm}>
         <FormLabel>Name</FormLabel>
-        <Input value={inputState.name} name='name' onChange={handleNameChange} placeholder='Enter your name' type='text' bg="white" />
+        <Input value={inputState?.name} name='name' onChange={handleNameChange} placeholder='Enter your name' type='text' bg="white" />
         <Text fontSize="x-small" color="red">{errors.name}</Text>
 
         <FormLabel>Email address</FormLabel>
-        <Input value={inputState.email} onChange={handleNameChange} name='email' placeholder='Enter your email' bg="white" type='email' />
+        <Input value={inputState?.email} onChange={handleNameChange} name='email' placeholder='Enter your email' bg="white" type='email' />
         <Text fontSize="x-small" color="red">{errors.email}</Text>
 
 
         <FormLabel>Address</FormLabel>
-        <Textarea value={inputState.textarea} onChange={handleNameChange} name='textarea' bg="white" placeholder='Here is a sample placeholder' />
+        <Textarea value={inputState?.textarea} onChange={handleNameChange} name='textarea' bg="white" placeholder='Here is a sample placeholder' />
         <Text fontSize="x-small" color="red">{errors.textarea}</Text>
 
 
         <FormLabel>Phone</FormLabel>
-        <Input value={inputState.tel} onChange={handleNameChange} name='tel' placeholder='Enter your contact' bg="white" type='number' />
+        <Input value={inputState?.tel} onChange={handleNameChange} name='tel' placeholder='Enter your contact' bg="white" type='number' />
         <Text fontSize="x-small" color="red">{errors.tel}</Text>
 
         <Text 
@@ -140,7 +140,7 @@ const UserdataDisplay = () => {
         fontWeight={700}
         border="1px solid lightgray">
           Unique User Id is 
-          <Text fontWeight={500} color="blue.300">{inputState.userId}</Text>
+          <Text fontWeight={500} color="blue.300">{inputState?.userId}</Text>
         </Text>
 
 
